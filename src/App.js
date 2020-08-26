@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
   }
 
-  h1, h2, h3, p {
+  h1, h2, h3 {
     font-family: Pacifico,san-serif;
     padding: 0;
     margin: 0;
