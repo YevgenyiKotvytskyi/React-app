@@ -5,7 +5,6 @@ import dbMenu from './DBMenu'
 
 const MenuStyled = styled.main`
     backgrond-color: #ccc;
-    margin-top: 80px;
 `;
 
 const SectionMenu = styled.section`
