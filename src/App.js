@@ -50,6 +50,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  button {
+    cursor: pointer;
+  }
+
 `;
 
 

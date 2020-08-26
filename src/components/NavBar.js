@@ -34,9 +34,9 @@ const ImgLogo = styled.img`
 const ButtonSing = styled.button`
     padding: 0;
     border: none;
+    border-color:transparent;
     background: none;
     color: white;
-    text-transform: uppercase;
     text-size: 16px;
 `;
 
@@ -52,6 +52,6 @@ export const NavBar = () => (
             <ImgLogo src = {logoImg} alt = "logo"/>
             <H1>Mr Donald's</H1>  
         </Logo>
-        <ButtonSing><ImgButton src ={buttonImg} alt = 'sign in'/><p>Войти</p></ButtonSing>
+        <ButtonSing><ImgButton src ={buttonImg} alt = 'sign in'/><p>войти</p></ButtonSing>
     </NavBarStyled>
 );
