@@ -49,9 +49,9 @@ const ImgButton = styled.img`
 export const NavBar = () => (
     <NavBarStyled>
         <Logo>
-            <ImgLogo src = {logoImg} alt = "logo"/>
+            <ImgLogo src = {logoImg} alt = "Лого"/>
             <H1>Mr Donald's</H1>  
         </Logo>
-        <ButtonSing><ImgButton src ={buttonImg} alt = 'sign in'/><p>войти</p></ButtonSing>
+        <ButtonSing><ImgButton src ={buttonImg} alt = 'Войти'/><p>войти</p></ButtonSing>
     </NavBarStyled>
 );
