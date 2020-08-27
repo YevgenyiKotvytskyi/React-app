@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ModalButton } from './ModalButton'
+import { ButtonCheckout } from './ButtonCheckout'
 
 
 const Overlay = styled.div`
@@ -16,7 +16,7 @@ const Overlay = styled.div`
     z-index: 1000;
 `;
 
-const Modal =styled.div`
+const Modal = styled.div`
     position:relative;
     background-color: #fff;
     width: 600px;
@@ -29,19 +29,22 @@ const Banner = styled.div`
     background-image:  url(./image${ ({img}) => img });
     background-size: cover;
     backgrond-position: center;
-    margin-bottom: 20px;
-
 `;
 
-const SpanPrice = styled.span`
-    float: right;
-`
+const Content = styled.section`
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 200px);
+`;
 
-const PricePanel = styled.div`
-    width: 100%;
-    padding: 0 53px 0 37px;
-    font-family: Pacifico,san-serif;
-    font-size: 30px;
+const HeaderContent = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Patifico', cursive;
 `;
 
 
@@ -59,12 +62,14 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
         <Overlay id = "overlay" onClick = {closeModal}>
             <Modal>
                 <Banner img = { openItem.img }/>
-                    <PricePanel>
-                        <span>{openItem.name}</span>
-                        <SpanPrice>{openItem.price.toLocaleString('ru-Ru',
-                            {style: 'currency', currency: 'RUB'})}</SpanPrice>
-                    </PricePanel>
-                    <ModalButton/>
+                    <Content>
+                        <HeaderContent>
+                            <div>{openItem.name}</div>
+                            <div>{openItem.price.toLocaleString('ru-Ru',
+                                {style: 'currency', currency: 'RUB'})}</div>
+                        </HeaderContent>
+                        <ButtonCheckout>Добавить</ButtonCheckout>
+                    </Content>
             </Modal>
         </Overlay>
     )
