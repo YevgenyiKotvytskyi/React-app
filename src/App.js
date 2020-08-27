@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavBar } from './components/NavBar'
-import { Menu } from './components/Menu'
-import { ModalItem } from './components/ModalItem'
-import { GlobalStyle } from './components/GlobalStyle'
+import { NavBar } from './components/NavBar';
+import { Order } from './components/Order';
+import { Menu } from './components/Menu';
+import { ModalItem } from './components/ModalItem';
+import { GlobalStyle } from './components/GlobalStyle';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <GlobalStyle/>
       <NavBar/>
+      <Order/>
       <Menu setOpenItem = { setOpenItem }/>
       <ModalItem 
         openItem = { openItem } 
