@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const DivBanner =  styled.div`
-    margin-top: 80px;
     background-image:  ${({ img }) => `url(${ img })`};
     background-position: center;    
     background-repeat: no-repeat;
