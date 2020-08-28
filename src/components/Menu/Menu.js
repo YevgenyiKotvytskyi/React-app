@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ListItem } from './ListItem';
-import dbMenu from './DBMenu'
+import dbMenu from '../Common/DBMenu'
 import { Banner } from './Banner'
 
 
@@ -13,7 +13,6 @@ const MenuStyled = styled.main`
 
 const SectionMenu = styled.section`
     padding: 30px;
-
 `;
 
 export const Menu = ( { setOpenItem } ) => (
