@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { formatCurrency } from '../Function/SecondaryFunction'
 
 const Item = styled.li`
     position: relative;
@@ -48,10 +49,9 @@ export const ListItem = ({ itemList, setOpenItem }) => (
             <Item 
                 key = {item.id}
                 img = {item.img}
-                onClick = {() => setOpenItem(item)}>
+                onClick = { () => setOpenItem(item) }>
                 <p>{item.name}</p>
-                <p>{item.price.toLocaleString('ru-Ru',
-                    {style: 'currency', currency: 'RUB'})}</p>
+                <p>{ formatCurrency(item.price) }</p>
             </Item>
             )
 
